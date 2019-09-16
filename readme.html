@@ -1,0 +1,478 @@
+<!DOCTYPE html><html><head>
+      <title>readme</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css">
+      
+      
+
+      
+      
+      
+      
+      
+      
+
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h2 class="mume-header" id="react-ho%E1%BA%A1t-%C4%91%E1%BB%99ng-nh%C6%B0-th%E1%BA%BF-n%C3%A0o">React ho&#x1EA1;t &#x111;&#x1ED9;ng nh&#x1B0; th&#x1EBF; n&#xE0;o?</h2>
+
+<ul>
+<li>
+<p>Babel: <a href="https://babeljs.io/docs/en/">https://babeljs.io/docs/en/</a></p>
+</li>
+<li>
+<p>Demo v&#x1EC1; Babel: <a href="https://babeljs.io/repl">https://babeljs.io/repl</a></p>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> arrCopy <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>arr<span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</pre><ul>
+<li>
+<p><code>React</code> v&#xE0; <code>ReactDOM</code>: <a href="https://codepen.io/no197/pen/jONKxop">https://codepen.io/no197/pen/jONKxop</a></p>
+<ul>
+<li>
+<p><code>ReactDOM</code>: T&#x1B0;&#x1A1;ng t&#xE1;c v&#x1EDB;i <code>DOM</code> c&#x1EE7;a trang web</p>
+</li>
+<li>
+<p><code>React</code>: T&#x1EA1;o ra c&#xE1;c <code>Component</code>, c&#xE1;c th&#xE0;nh ph&#x1EA7;n giao di&#x1EC7;n v&#xE0; x&#x1EED; l&#xFD; logic gi&#x1EEF;a c&#xE1;c th&#xE0;nh ph&#x1EA7;n &#x111;&#xF3;</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>React</code> &#x111;&#x1B0;&#x1EE3;c s&#x1EED; d&#x1EE5;ng &#x1EDF; &#x111;&#xE2;u m&#xE0; ph&#x1EA3;i <code>import</code>?</p>
+<ul>
+<li>
+<p><code>JSX</code> trong <code>React</code>?</p>
+<pre data-role="codeBlock" data-info="XML" class="language-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>JSXName</span> <span class="token attr-name">JSXAttributes</span><span class="token punctuation">&gt;</span></span> // --&gt; OpenTag
+    ....                    // ---&gt; Children(Content or Nested Component)
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>JSXName</span><span class="token punctuation">&gt;</span></span>          // --&gt; CloseTag
+</pre></li>
+<li>
+<p>V&#xED; d&#x1EE5;:</p>
+<pre data-role="codeBlock" data-info="XML" class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MyButton</span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>blue<span class="token punctuation">&quot;</span></span> <span class="token attr-name">shadowSize</span><span class="token attr-value"><span class="token punctuation">=</span>{2}</span><span class="token punctuation">&gt;</span></span>
+Click Me
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>MyButton</span><span class="token punctuation">&gt;</span></span>
+</pre></li>
+</ul>
+<ul>
+<li>
+<p>Self Closing:</p>
+<pre data-role="codeBlock" data-info="XML" class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>sidebar<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+
+</pre></li>
+</ul>
+<ul>
+<li>
+<p>Tr&#x1B0;&#x1EDB;c khi c&#xF3; <code>JSX</code>?</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript">React<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span>MyButton<span class="token punctuation">,</span> <span class="token punctuation">{</span> color<span class="token punctuation">:</span> <span class="token string">&quot;blue&quot;</span><span class="token punctuation">,</span> shadowSize<span class="token punctuation">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">&quot;Click Me&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p>--&gt; Babel chuy&#x1EC3;n t&#x1EEB; <code>JSX</code> sang <code>React.createElement</code> n&#xEA;n c&#x1EA7;n import <code>React</code></p>
+</li>
+<li>
+<p>Nh&#xFA;ng <code>javascript</code> v&#xE0;o <code>JSX</code></p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span> <span class="token punctuation">{</span>a<span class="token punctuation">}</span> <span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+</pre><p>---&gt;D&#xF9;ng c&#x1EB7;p <code>{}</code> &#x111;&#x1EC3; th&#xEA;m <code>javascript</code> v&#xE0;o <code>JSX</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="component">Component</h2>
+
+<ul>
+<li>
+<h3>Component ????</h3>
+<p>M&#x1ED9;t <code>function</code> ho&#x1EB7;c <code>class</code> m&#xF4; t&#x1EA3; m&#x1ED9;t th&#xE0;nh ph&#x1EA7;n giao di&#x1EC7;n v&#xE0; tr&#x1EA3; v&#x1EC1; th&#xE0;nh ph&#x1EA7;n giao di&#x1EC7;n &#x111;&#xF3;</p>
+<p><img src="https://i2.wp.com/programmingwithmosh.com/wp-content/uploads/2018/08/React-Components-Example-1024x556.jpeg?resize=700%2C380&amp;ssl=1" alt="alt text" title="Component"></p>
+<p><img src="https://miro.medium.com/max/303/1*7AM6LF0vaLNt9UPTOo5JPw.png" alt="alt text" title="Component"></p>
+<ul>
+<li>render</li>
+<li>state</li>
+<li>props</li>
+<li>context</li>
+<li>lifecycle events</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<h3>Khi n&#xE0;o t&#xE1;ch m&#x1ED9;t <code>Component</code> th&#xE0;nh c&#xE1;ch ph&#x1EA7;n nh&#x1ECF; h&#x1A1;n?</h3>
+<p>Khi <code>Component</code> &#x111;&#xF3; c&#xF3; c&#xE1;c th&#xE0;nh ph&#x1EA7;n &#x111;&#x1B0;&#x1EE3;c d&#xF9;ng &#x111;i d&#xF9;ng l&#x1EA1;i nhi&#xEA;u l&#x1EA7;n ho&#x1EB7;c &#x111;&#x1B0;&#x1EE3;c s&#x1EED; d&#x1EE5;ng &#x1EDF; nhi&#x1EC1;u n&#x1A1;i trong project</p>
+<p><img src="https://ihatetomatoes.net/wp-content/uploads/2017/08/01-collapsible-component-with-props-1024x639.png" alt="alt text" title="Component"></p>
+</li>
+</ul>
+<ul>
+<li>
+<p>PROPS</p>
+<p><code>Props</code> l&#xE0; properties c&#x1EE7;a m&#x1ED9;t <code>component</code> . Ch&#xFA;ng ta c&#xF3; th&#x1EC3; set gi&#xE1; tr&#x1ECB; <code>props</code> c&#x1EE7;a m&#x1ED9;t <code>component</code> b&#x1EB1;ng c&#xE1;ch truy&#x1EC1;n d&#x1EEF; li&#x1EC7;u t&#x1EEB; ngo&#xE0;i v&#xE0;o. Khi m&#x1ED9;t <code>props</code> &#x111;&#x1B0;&#x1EE3;c truy&#x1EC1;n v&#xE0;o <code>component</code> th&#xEC; gi&#xE1; tr&#x1ECB; c&#x1EE7;a n&#xF3; l&#xE0; kh&#xF4;ng thay &#x111;&#x1ED5;i .</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>STATE</p>
+<p><code>State</code> bi&#x1EC3;u hi&#x1EC7;n tr&#x1EA1;ng th&#xE1;i c&#x1EE7;a <code>component</code>, state l&#xE0; private v&#xE0; ch&#x1EC9; thay &#x111;&#x1ED5;i b&#xEA;n trong b&#x1EA3;n th&#xE2;n <code>component</code> &#x111;&#xF3;.</p>
+</li>
+<li>
+<p>STATE vs PROPS</p>
+<p><img src="https://ihatetomatoes.net/wp-content/uploads/2017/08/03-state-vs-props-1024x460.png" alt="alt text" title="Component"></p>
+</li>
+</ul>
+<ul>
+<li>
+<h3>C&#xF3; bao nhi&#xEA;u c&#xE1;ch t&#x1EA1;o component?</h3>
+<p>C&#xF3; 2 c&#xE1;ch l&#xE0; d&#xF9;ng <code>class</code> v&#xE0; d&#xF9;ng <code>function</code></p>
+</li>
+<li>
+<h3>T&#x1EA1;i sao l&#x1EA1;i c&#xF3; 2 c&#xE1;ch?</h3>
+<ul>
+<li>N&#x1EBF;u m&#x1ED9;t <code>component</code> s&#x1EED; d&#x1EE5;ng <code>state</code> th&#xEC; n&#xF3; <code>n&#xEA;n</code> &#x111;&#x1B0;&#x1EE3;c d&#xF9;ng v&#x1EDB;i <code>class</code> v&#xE0; &#x111;&#x1B0;&#x1EE3;c g&#x1ECD;i l&#xE0; <code>stateful component</code></li>
+</ul>
+<p><img src="https://miro.medium.com/max/2800/1*gv0YJ8Z1QwkDlQPkraSUDw.png" alt="alt text" title="Component"></p>
+</li>
+</ul>
+<ul>
+<li>
+<p>Ng&#x1B0;&#x1EE3;c l&#x1EA1;i <code>component</code> kh&#xF4;ng s&#x1EED; d&#x1EE5;ng <code>state</code> th&#xEC; n&#xF3; <code>n&#xEA;n</code> d&#xF9;ng <code>function</code> v&#xE0; &#x111;&#x1B0;&#x1EE3;c g&#x1ECD;i l&#xE0; <code>stateless component</code></p>
+<p>-&#x110;i&#x1EC3;m kh&#xE1;c nhau gi&#x1EEF;a ful v&#xE0; less &#x1F603;)<br>
+<img src="https://miro.medium.com/max/2400/1*mPWvIvfhzLpnzkgUg7sePg.png" alt="alt text" title="Component"></p>
+</li>
+</ul>
+<ul>
+<li>
+<h3>Em ch&#x1B0;a h&#x1ECD;c OOP n&#xEA;n kh&#xF4;ng bi&#x1EBF;t d&#xF9;ng class &#x1F603;) em c&#xF3; th&#x1EC3; d&#xF9;ng function &#x111;&#x1EC3; t&#x1EA1;o stateful component kh&#xF4;ng ?</h3>
+<p>&#x110;&#xE3; gi&#x1EA3;i th&#xED;ch r&#x1ED3;i c&#xF2;n h&#x1ECF;i nhi&#x1EC1;u qu&#xE1; &#x1F612; c&#x1A1; m&#xE0; &#x111;&#x1B0;&#x1EE3;c nha! React m&#x1EDB;i &#x111;&#xE2;y &#x111;&#xE3; cung c&#x1EA5;p cho ch&#xFA;ng ta m&#x1ED9;t t&#xED;nh n&#x103;ng m&#x1EDB;i l&#xE0; <code>Hooks</code> n&#x1EBF;u d&#xF9;ng <code>function</code> + <code>Hooks</code> ==&gt; <code>stateful component</code></p>
+</li>
+<li>
+<h3>Th&#x1EF1;c h&#xE0;nh t&#x1EA1;o c&#xE1;c Component v&#xE0; h&#x1B0;&#x1EDB;ng d&#x1EAB;n c&#xE1;c ph&#xED;m t&#x1EAF;t</h3>
+<ul>
+<li>
+<p>S&#x1EED; d&#x1EE5;ng <code>create-react-app</code> &#x111;&#x1EC3; t&#x1EA1;o project: npx <code>create-react-app</code></p>
+</li>
+<li>
+<p>S&#x1EED; d&#x1EE5;ng th&#x1B0; m&#x1EE5;c <code>react-component</code></p>
+</li>
+<li>
+<p>C&#xE0;i c&#xE1;c <code>package</code>: <code>npm install</code></p>
+</li>
+<li>
+<p>Run project: <code>npm start</code></p>
+</li>
+<li>
+<p>html to JSX tool</p>
+</li>
+<li>
+<p><code>&#x110;&#x1EC1; b&#xE0;i</code>: T&#x1EA1;o m&#x1ED9;t form g&#x1ED3;m m&#x1ED9;t thanh input v&#xE0; m&#x1ED9;t button ADD</p>
+</li>
+</ul>
+</li>
+<li>
+<h2>Handling Events trong react</h2>
+<p>Trong react ta c&#xF3; m&#x1ED9;t s&#x1ED1; h&#xE0;m b&#x1EAF;t s&#x1EF1; ki&#x1EC7;n cho handle nh&#x1B0; <code>onClick</code>, <code>onChange</code>, <code>onSubmit</code></p>
+<p>V&#xED; d&#x1EE5;:</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">handleClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Clicked!&quot;</span><span class="token punctuation">)</span>
+
+<span class="token operator">&lt;</span>button onclick<span class="token operator">=</span><span class="token punctuation">{</span>handleClick<span class="token operator">!</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>Click me<span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+</pre><p><code>L&#x1AF;U &#xDD;</code>: Do con tr&#x1ECF; <code>this</code> n&#xEA;n &#x111;&#x1EC3; tr&#xE1;nh r&#x1EAF;c r&#x1ED1;i n&#xEA;n d&#xF9;ng <code>arrow function</code> cho c&#xE1;c handle event</p>
+</li>
+</ul>
+<ul>
+<li>
+<h2>M&#x1ED9;t v&#xE0;i v&#x1EA5;n &#x111;&#x1EC1; v&#x1EDB;i state</h2>
+<ul>
+<li>
+<p><code>State</code> kh&#xF4;ng th&#x1EC3; modify tr&#x1EF1;c ti&#x1EBF;p &#x111;&#x1EC3; thay &#x111;&#x1ED5;i state ta ph&#x1EA3;i d&#xF9;ng h&#xE0;m <code>setState()</code><br>
+<img src="https://cdn-media-1.freecodecamp.org/images/1*qle8858T8Amobp6-WCrLZA.png" alt="alt text" title="Component"></p>
+</li>
+<li>
+<p><code>State</code> l&#xE0; private n&#xEA;n ch&#x1EC9; t&#x1ED3;n t&#x1EA1;i trong n&#x1ED9;i b&#x1ED9; component</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<h2>Hooks c&#x103;n b&#x1EA3;n v&#x1EDB;i useState</h2>
+</li>
+<li>
+<h2>React Lifecycle</h2>
+<p><img src="https://i0.wp.com/blogs.innovationm.com/wp-content/uploads/2018/05/React-Compnonent-Lifecycle-final.png?fit=777%2C650" alt="alt text" title="Component"></p>
+</li>
+<li>
+<h2>useRef, useEffect, useContext trong Hooks</h2>
+</li>
+<li>
+<h2>Th&#x1EF1;c h&#xE0;nh x&#xE2;y d&#x1EF1;ng app todo</h2>
+</li>
+</ul>
+<ul>
+<li>
+<h2>T&#xE1;ch component v&#xE0; c&#xE1;ch truy&#x1EC1;n d&#x1EEF; li&#x1EC7;u gi&#x1EEF;a c&#xE1;c component th&#xF4;ng qua props</h2>
+</li>
+</ul>
+<ul>
+<li>
+<h2>B&#x1EA5;t l&#x1EE3;i c&#x1EE7;a vi&#x1EC7;c one-way data bindings trong react v&#xE0; gi&#x1EDB;i thi&#x1EC7;u v&#x1EC1; redux</h2>
+</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
